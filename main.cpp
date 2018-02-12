@@ -30,6 +30,8 @@ int main() {
     linkedList->addToBack(20);
     linkedList->addToBack(25);
 
+    linkedList->insert(2,14);
+
     linkedList->addToFront(12);
 
 //    linkedList->removeFromBack();

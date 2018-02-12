@@ -34,3 +34,9 @@ bool LinkedIterator<ItemType>::operator!=(const LinkedIterator<ItemType> &rightH
 {
     return ((containerPtr != rightHandSide.containerPtr) || (currentItemPtr != rightHandSide.currentItemPtr));
 }
+
+template<class ItemType>
+Node<ItemType>* LinkedIterator<ItemType>::getPtr()
+{
+    return currentItemPtr;
+}

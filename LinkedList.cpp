@@ -63,34 +63,34 @@ Node<ItemType>* LinkedList<ItemType>::getNodeAt(int position) const
 
     return curPtr;
 }
-//
-//template<class ItemType>
-//bool LinkedList<ItemType>::insert(int newPosition, const ItemType& newEntry)
-//{
-//    bool ableToInsert = (newPosition >= 1 && (newPosition <=  itemCount + 1));
-//    if (ableToInsert)
-//    {
-//        auto newNodePtr = new Node<ItemType>(newEntry);
-//
-//        if (newPosition == 1)
-//        {
-//            newNodePtr -> setNext(headPtr);
-//            headPtr = newNodePtr;
-//        }
-//        else
-//        {
-//            Node<ItemType>* prevPtr = getNodeAt(newPosition - 1);
-//
-//            newNodePtr -> setNext(prevPtr -> getNext());
-//            prevPtr -> setNext(newNodePtr);
-//        }
-//
-//        itemCount++;
-//    }
-//
-//    return ableToInsert;
-//}
-//
+
+template<class ItemType>
+bool LinkedList<ItemType>::insert(int newPosition, const ItemType& newEntry)
+{
+    bool ableToInsert = (newPosition >= 1 && (newPosition <=  itemCount + 1));
+    if (ableToInsert)
+    {
+        auto newNodePtr = new Node<ItemType>(newEntry);
+
+        if (newPosition == 1)
+        {
+            newNodePtr -> setNext(headPtr);
+            headPtr = newNodePtr;
+        }
+        else
+        {
+            Node<ItemType>* prevPtr = getNodeAt(newPosition - 1);
+
+            newNodePtr -> setNext(prevPtr -> getNext());
+            prevPtr -> setNext(newNodePtr);
+        }
+
+        itemCount++;
+    }
+
+    return ableToInsert;
+}
+
 //template<class ItemType>
 //bool LinkedList<ItemType>::remove(int position)
 //{
@@ -137,14 +137,25 @@ void LinkedList<ItemType>::addToBack(const ItemType &newEntry)
         auto newNodePtr = new Node<ItemType>(newEntry);
         auto curPtr = headPtr;
 
-        vector<int>::iterator ptr;
-
         while(curPtr != nullptr && curPtr -> getNext() != nullptr)
         {
             curPtr = curPtr -> getNext();
         }
         curPtr -> setNext(newNodePtr);
         itemCount++;
+
+//        auto newNodePtr = new Node<ItemType>(newEntry);
+//        LinkedIterator<ItemType> currentIterator = this->begin();
+//        while(currentIterator != this->end())
+//        {
+//            ++currentIterator;
+//            if(currentIterator == this->end())
+//            {
+//                (*currentIterator).getPtr()->setNext(newNodePtr);
+//                itemCount++;
+//            }
+//        }
+
     }
 }
 
@@ -201,6 +212,8 @@ void LinkedList<ItemType>::removeFromFront()
         itemCount--;
     }
 }
+
+
 
 template<class ItemType>
 LinkedIterator<ItemType> LinkedList<ItemType>::begin()
