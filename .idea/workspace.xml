@@ -13,8 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="873ed8ca-265e-42d3-b8aa-385be95b5812" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList.cpp" afterPath="$PROJECT_DIR$/LinkedList.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList.hpp" afterPath="$PROJECT_DIR$/LinkedList.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Node.cpp" afterPath="$PROJECT_DIR$/Node.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Node.hpp" afterPath="$PROJECT_DIR$/Node.hpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedList.hpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinkedList.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LinkedList.hpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1542">
@@ -79,8 +79,8 @@
       <file leaf-file-name="Node.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Node.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            <state relative-caret-position="884">
+              <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="e#159#175#0" expanded="true" />
               </folding>
@@ -88,19 +88,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Node.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Node.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
                 <element signature="e#78#94#0" expanded="true" />
-                <element signature="e#151#167#0" expanded="true" />
-                <element signature="e#298#314#0" expanded="true" />
-                <element signature="e#412#428#0" expanded="true" />
-                <element signature="e#514#530#0" expanded="true" />
-                <element signature="e#626#642#0" expanded="true" />
-                <element signature="e#714#730#0" expanded="true" />
+                <element signature="e#148#164#0" expanded="true" />
+                <element signature="e#262#278#0" expanded="true" />
+                <element signature="e#364#380#0" expanded="true" />
+                <element signature="e#476#492#0" expanded="true" />
+                <element signature="e#564#580#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,13 +154,13 @@
       <list>
         <option value="$PROJECT_DIR$/LinkedList.h" />
         <option value="$PROJECT_DIR$/Node.h" />
-        <option value="$PROJECT_DIR$/Node.hpp" />
-        <option value="$PROJECT_DIR$/Node.cpp" />
         <option value="$PROJECT_DIR$/LinkedIterator.hpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/LinkedIterator.cpp" />
         <option value="$PROJECT_DIR$/LinkedList.cpp" />
         <option value="$PROJECT_DIR$/LinkedList.hpp" />
+        <option value="$PROJECT_DIR$/Node.hpp" />
+        <option value="$PROJECT_DIR$/Node.cpp" />
       </list>
     </option>
   </component>
@@ -250,7 +249,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518362350870</updated>
-      <workItem from="1518362352108" duration="22337000" />
+      <workItem from="1518362352108" duration="22882000" />
     </task>
     <task id="LOCAL-00001" summary="Updated creator name">
       <created>1518446677232</created>
@@ -259,20 +258,27 @@
       <option name="project" value="LOCAL" />
       <updated>1518446677232</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updating comments">
+      <created>1518455213135</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1518455213135</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22337000" />
+    <option name="totallyTimeSpent" value="22882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="130" y="-8" width="3710" height="2168" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976556" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299389" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11509434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -297,7 +303,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated creator name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated creator name" />
+    <MESSAGE value="Updating comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -327,42 +334,6 @@
         <state relative-caret-position="-5932">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding>
-            <element signature="e#159#175#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding>
-            <element signature="e#49#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding>
-            <element signature="e#78#94#0" expanded="true" />
-            <element signature="e#151#167#0" expanded="true" />
-            <element signature="e#298#314#0" expanded="true" />
-            <element signature="e#412#428#0" expanded="true" />
-            <element signature="e#514#530#0" expanded="true" />
-            <element signature="e#626#642#0" expanded="true" />
-            <element signature="e#714#730#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -415,6 +386,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+          <folding>
+            <element signature="e#49#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/LinkedList.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1542">
@@ -422,6 +403,31 @@
           <folding>
             <element signature="e#120#138#0" expanded="true" />
             <element signature="e#307#323#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="e#159#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#78#94#0" expanded="true" />
+            <element signature="e#148#164#0" expanded="true" />
+            <element signature="e#262#278#0" expanded="true" />
+            <element signature="e#364#380#0" expanded="true" />
+            <element signature="e#476#492#0" expanded="true" />
+            <element signature="e#564#580#0" expanded="true" />
           </folding>
         </state>
       </provider>

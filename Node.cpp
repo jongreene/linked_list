@@ -5,14 +5,7 @@
 #include "Node.hpp"
 
 template<class ItemType>
-Node<ItemType>::Node()
-{
-    next = nullptr;
-}
-
-template<class ItemType>
-Node<ItemType>::Node(const ItemType& anItem, Node<ItemType>* nextNodePtr)
-        : item(anItem), next(nextNodePtr)
+Node<ItemType>::Node() : next(nullptr)
 {
 
 }
