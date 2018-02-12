@@ -20,8 +20,6 @@ class LinkedList {
 private:
     Node<ItemType> *headPtr;
 
-    Node<ItemType> *tailPtr;
-
     int itemCount;
 
     Node<ItemType> *getNodeAt(int position) const;
@@ -33,30 +31,37 @@ public:
 //    LinkedList(const LinkedList<ItemType>& aList);
 //    virtual ~LinkedList();
 
+    // returns a bool; true if empty false otherwise
     bool isEmpty() const;
 
+    // returns the length of the list
     int getLength() const;
 
-//    bool insert(int newPosition, const ItemType& newEntry);
-//    bool remove(int position);
-//    void clear();
+    // takes a position and a new entry
+    // creates a new node and inserts it at the specified place if possible
+    bool insert(int newPosition, const ItemType& newEntry);
+
+    // adds an item to the back of the list
     void addToBack(const ItemType &newEntry);
 
+    // adds an item to the front of the list
     void addToFront(const ItemType &newEntry);
 
+    // removes the last node in the list
     void removeFromBack();
 
+    // removes the leading node of the list
     void removeFromFront();
 
+    // returns the item at the requested position (if possible)
     ItemType getEntry(int position) const throw();
-
-    void print();
 
 //    ItemType replace(int position, const ItemType& newEntry) throw();
 
-
+    // Used as a starting point for iterator functionality
     LinkedIterator<ItemType> begin();
 
+    // Used as an stopping(ending) point for iterator functionality
     LinkedIterator<ItemType> end();
 
 };

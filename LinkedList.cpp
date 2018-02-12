@@ -203,19 +203,6 @@ void LinkedList<ItemType>::removeFromFront()
 }
 
 template<class ItemType>
-void LinkedList<ItemType>::print()
-{
-
-    LinkedIterator<ItemType> currentIterator = this->begin();
-    while(currentIterator != this->end())
-    {
-        std::cout << *currentIterator << " ";
-        ++currentIterator;
-    }
-
-}
-
-template<class ItemType>
 LinkedIterator<ItemType> LinkedList<ItemType>::begin()
 {
     return LinkedIterator<ItemType>(this,headPtr);
