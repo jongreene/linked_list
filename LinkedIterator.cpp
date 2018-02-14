@@ -24,6 +24,12 @@ LinkedIterator<ItemType> LinkedIterator<ItemType>::operator++()
 }
 
 template<class ItemType>
+LinkedIterator<ItemType> LinkedIterator<ItemType>::operator++()
+{
+    currentItemPtr = currentItemPtr -> getLast();
+}
+
+template<class ItemType>
 bool LinkedIterator<ItemType>::operator==(const LinkedIterator<ItemType> &rightHandSide) const
 {
     return ((containerPtr == rightHandSide.containerPtr) && (currentItemPtr == rightHandSide.currentItemPtr));

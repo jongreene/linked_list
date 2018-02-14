@@ -26,6 +26,8 @@ public:
 
     LinkedIterator<ItemType> operator++();
 
+    LinkedIterator<ItemType> operator--();
+
     bool operator==(const LinkedIterator<ItemType>& rightHandSide) const;
 
     bool operator!=(const LinkedIterator<ItemType>& rightHandSide) const;
