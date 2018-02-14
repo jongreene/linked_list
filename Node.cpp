@@ -30,9 +30,9 @@ void Node<ItemType>::setNext(Node<ItemType> *nextNodePtr)
 }
 
 template<class ItemType>
-void Node<ItemType>::setLast(Node<ItemType> *lastNodePtr)
+void Node<ItemType>::setPrevious(Node<ItemType> *lastNodePtr)
 {
-    last = lastNodePtr;
+    previous = lastNodePtr;
 }
 
 template<class ItemType>
@@ -48,7 +48,7 @@ Node<ItemType>* Node<ItemType>::getNext() const
 }
 
 template<class ItemType>
-Node<ItemType>* Node<ItemType>::getLast() const
+Node<ItemType>* Node<ItemType>::getPrevious() const
 {
-    return last;
+    return previous;
 }

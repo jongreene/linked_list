@@ -20,6 +20,8 @@ class LinkedList {
 private:
     Node<ItemType> *headPtr;
 
+    Node<ItemType> *tailPtr;
+
     int itemCount;
 
     Node<ItemType> *getNodeAt(int position) const;

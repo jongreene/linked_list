@@ -6,6 +6,8 @@
 #include "LinkedList.hpp"
 #include "LinkedList.cpp"
 
+
+// pretty print of doubly linked list
 ostream& operator<<(ostream& os, LinkedList<int>* list)
 {
     LinkedIterator<int> currentIterator = list->begin();
@@ -16,6 +18,8 @@ ostream& operator<<(ostream& os, LinkedList<int>* list)
         stringified += std::to_string(*currentIterator) + " ";
         ++currentIterator;
     }
+
+    stringified += std::to_string(*(list->end()));
 
     os << stringified;
 
@@ -31,10 +35,12 @@ int main() {
     linkedList->addToBack(1);
     linkedList->addToBack(2);
     linkedList->addToBack(3);
-    linkedList->addToFront(12);
+//    linkedList->addToFront(12);
     linkedList->addToBack(4);
+    linkedList->addToBack(5);
 
-    linkedList->removeFromFront();
+//    linkedList->removeFromFront();
+//    linkedList->removeFromBack();
 
 
 //    linkedList->insert(2,14);
@@ -44,8 +50,7 @@ int main() {
 //    linkedList->removeFromBack();
 //    linkedList->removeFromFront();
 
-//    linkedList->print();
-
+//    pretty print linked list
     std::cout << linkedList;
 
 //    std::cout << "length: " << linkedList->getLength();

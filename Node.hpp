@@ -19,6 +19,8 @@ private:
     // stores the location of the next node in the chain
     Node<ItemType>* next;
 
+    Node<ItemType>* previous;
+
     Node<ItemType>* last;
 
 public:
@@ -35,7 +37,7 @@ public:
     void setNext (Node<ItemType>* nextNodePtr);
 
     // sets the last node in the chain
-    void setLast (Node<ItemType>* nextNodePtr);
+    void setPrevious (Node<ItemType>* nextNodePtr);
 
     // returns the nodes item/value
     ItemType getItem() const;
@@ -43,7 +45,7 @@ public:
     // gets the next node in the chain
     Node<ItemType>* getNext() const;
 
-    Node<ItemType>* getLast() const;
+    Node<ItemType>* getPrevious() const;
 };
 
 

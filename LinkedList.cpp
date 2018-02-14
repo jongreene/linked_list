@@ -17,7 +17,9 @@ void LinkedList<ItemType>::addToEmpty(const ItemType &newEntry)
     auto newNodePtr = new Node<ItemType>(newEntry);
     headPtr = newNodePtr;
     headPtr->setNext(nullptr);
-    headPtr->setLast(nullptr);
+    headPtr->setPrevious(nullptr);
+
+    tailPtr = newNodePtr;
 
     itemCount++;
 }
@@ -25,8 +27,7 @@ void LinkedList<ItemType>::addToEmpty(const ItemType &newEntry)
 template<class ItemType>
 bool LinkedList<ItemType>::isEmpty() const
 {
-    bool empty = getLength() > 0;
-    return empty;
+    return getLength() > 0;
 }
 
 template<class ItemType>
@@ -94,7 +95,7 @@ bool LinkedList<ItemType>::insert(int newPosition, const ItemType& newEntry)
 }
 
 //template<class ItemType>
-//bool LinkedList<ItemType>::remove(int position)
+//bool LinkedList<ItemType>::removeAt(int position)
 //{
 //    bool ableToRemove = (position >= 1) && (position <= itemCount);
 //    if (ableToRemove) {
@@ -138,25 +139,16 @@ void LinkedList<ItemType>::addToBack(const ItemType &newEntry)
     else
     {
         auto newNodePtr = new Node<ItemType>(newEntry);
-        auto curPtr = headPtr;
-        auto lastPtr = headPtr;
 
-        while(curPtr != nullptr && curPtr -> getNext() != nullptr)
-        {
-            curPtr = curPtr -> getNext();
-            lastPtr = lastPtr -> getNext();
-        }
+        auto prevTail = tailPtr;
 
-        curPtr -> setNext(newNodePtr);
+        tailPtr -> setNext(newNodePtr);
 
-        curPtr = curPtr -> getNext();
-        curPtr -> setLast(lastPtr);
+        tailPtr = tailPtr -> getNext();
 
-//        std::cout << lastPtr -> getItem() << " " << curPtr->getLast() -> getItem() << " " << curPtr -> getItem() << "\n";
+        tailPtr -> setPrevious(prevTail);
 
         itemCount++;
-
-//
     }
 }
 
@@ -172,7 +164,7 @@ void LinkedList<ItemType>::addToFront(const ItemType &newEntry)
 
         newNodePtr -> setNext(headPtr);
 
-        headPtr -> setLast(newNodePtr);
+        headPtr -> setPrevious(newNodePtr);
 
         headPtr = newNodePtr;
 
@@ -188,14 +180,9 @@ void LinkedList<ItemType>::removeFromBack()
     }
     else
     {
-        auto curPtr = headPtr;
-        while(curPtr != nullptr && curPtr -> getNext() -> getNext() != nullptr)
-        {
-            curPtr = curPtr -> getNext();
+        tailPtr = tailPtr -> getPrevious();
 
-        }
-
-        curPtr -> setNext(nullptr);
+        tailPtr -> setNext(nullptr);
 
         itemCount--;
     }
@@ -209,9 +196,7 @@ void LinkedList<ItemType>::removeFromFront()
     }
     else
     {
-        headPtr = headPtr -> getNext();
-
-        headPtr -> getNext() -> setLast(headPtr);
+        headPtr = headPtr->getNext();
 
         itemCount--;
     }
@@ -228,7 +213,7 @@ LinkedIterator<ItemType> LinkedList<ItemType>::begin()
 template<class ItemType>
 LinkedIterator<ItemType> LinkedList<ItemType>::end()
 {
-    return LinkedIterator<ItemType>(this, nullptr);
+    return LinkedIterator<ItemType>(this, tailPtr);
 }
 
 
