@@ -24,7 +24,7 @@ private:
 
     int itemCount;
 
-    Node<ItemType> *getNodeAt(int position);
+
 
     void addToEmpty(const ItemType &newEntry);
 
@@ -32,6 +32,8 @@ public:
     LinkedList();
 //    LinkedList(const LinkedList<ItemType>& aList);
 //    virtual ~LinkedList();
+
+    Node<ItemType> *getNodeAt(int position);
 
     // returns a bool; true if empty false otherwise
     bool isEmpty() const;
@@ -61,6 +63,16 @@ public:
     ItemType getEntry(int position) throw();
 
 //    ItemType replace(int position, const ItemType& newEntry) throw();
+
+    void swapNodes(int firstPosition, int secondPosition);
+
+    void replaceNodeAt(int position, Node<ItemType>* newNode);
+
+    void replaceNodeAt(int position, const ItemType &newEntry);
+
+    void push(const ItemType &newEntry);
+
+    void pop();
 
     // Used as a starting point for iterator functionality
     LinkedIterator<ItemType> begin();

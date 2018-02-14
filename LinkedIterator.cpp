@@ -26,7 +26,7 @@ LinkedIterator<ItemType> LinkedIterator<ItemType>::operator++()
 template<class ItemType>
 LinkedIterator<ItemType> LinkedIterator<ItemType>::operator--()
 {
-    currentItemPtr = currentItemPtr -> getLast();
+    currentItemPtr = currentItemPtr -> getPrevious();
 }
 
 template<class ItemType>

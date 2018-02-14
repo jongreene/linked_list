@@ -218,7 +218,46 @@ void LinkedList<ItemType>::removeFromFront()
     }
 }
 
+template<class ItemType>
+void LinkedList<ItemType>::swapNodes(int firstPosition, int secondPosition)
+{
+    auto firstNode = getNodeAt(firstPosition);
+    auto secondNode = getNodeAt(secondPosition);
 
+    ItemType firstItem = firstNode->getItem();
+    ItemType secondItem = secondNode->getItem();
+
+    replaceNodeAt(firstPosition, secondItem);
+    replaceNodeAt(secondPosition, firstItem);
+
+}
+
+template<class ItemType>
+void LinkedList<ItemType>::replaceNodeAt(int position, const ItemType &newEntry)
+{
+    auto oldNode = getNodeAt(position);
+    auto newNode = new Node<ItemType>(newEntry);
+
+    newNode -> setNext(oldNode->getNext());
+    newNode -> setPrevious(oldNode->getPrevious());
+
+    oldNode -> getPrevious() -> setNext(newNode);
+    oldNode -> getNext() -> setPrevious(newNode);
+
+    delete oldNode;
+}
+
+template<class ItemType>
+void LinkedList<ItemType>::push(const ItemType &newEntry)
+{
+    addToFront(newEntry);
+}
+
+template<class ItemType>
+void LinkedList<ItemType>::pop()
+{
+    removeFromFront();
+}
 
 template<class ItemType>
 LinkedIterator<ItemType> LinkedList<ItemType>::begin()

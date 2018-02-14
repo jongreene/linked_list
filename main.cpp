@@ -34,18 +34,32 @@ int main() {
 //    linkedList->addToFront(15);
     linkedList->addToBack(1);
     linkedList->addToBack(2);
-    linkedList->addToBack(9);
+    linkedList->addToBack(3);
 //    linkedList->addToFront(12);
     linkedList->addToBack(4);
     linkedList->addToBack(5);
+    linkedList->addToBack(6);
+    linkedList->addToBack(7);
 
 //    linkedList->removeFromFront();
 //    linkedList->removeFromBack();
 
+    linkedList->swapNodes(2,3);
 
-    linkedList->insert(5,14);
+//    linkedList->insert(5,14);
+//
+//    linkedList->removeAt(3);
 
-    linkedList->removeAt(3);
+//    linkedList->replaceNodeAt(3,10);
+
+//    auto tmpNode = new Node<int>(3);
+//    auto tmpNode2 = new Node<int>(6);
+//    auto tmpNode = linkedList->getNodeAt(3)->getItem();
+//    auto tmpNode2 = linkedList->getNodeAt(6)->getItem();
+
+//    linkedList->replaceNodeAt(6,tmpNode);
+//    linkedList->replaceNodeAt(3,tmpNode2);
+
 //    linkedList->addToFront(12);
 
 //    linkedList->removeFromBack();
@@ -54,7 +68,7 @@ int main() {
 //    pretty print linked list
     std::cout << linkedList;
 
-    std::cout << "\nEntry at pos. 2: " << linkedList->getEntry(2);
+//    std::cout << "\nEntry at pos. 2: " << linkedList->getEntry(2);
 
 //    Test to throw error
 //    std::cout << "\nEntry at pos. 3: " << linkedList->getEntry(12);
