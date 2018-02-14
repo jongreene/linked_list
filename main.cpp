@@ -34,6 +34,8 @@ int main() {
     linkedList->addToFront(12);
     linkedList->addToBack(4);
 
+    linkedList->removeFromFront();
+
 
 //    linkedList->insert(2,14);
 

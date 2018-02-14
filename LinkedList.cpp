@@ -209,7 +209,9 @@ void LinkedList<ItemType>::removeFromFront()
     }
     else
     {
-        headPtr = headPtr->getNext();
+        headPtr = headPtr -> getNext();
+
+        headPtr -> getNext() -> setLast(headPtr);
 
         itemCount--;
     }
