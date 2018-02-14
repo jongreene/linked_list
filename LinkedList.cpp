@@ -74,22 +74,24 @@ bool LinkedList<ItemType>::insert(int newPosition, const ItemType& newEntry)
     bool ableToInsert = (newPosition >= 1 && (newPosition <=  itemCount + 1));
     if (ableToInsert)
     {
-        auto newNodePtr = new Node<ItemType>(newEntry);
-
         if (newPosition == 1)
         {
-            newNodePtr -> setNext(headPtr);
-            headPtr = newNodePtr;
+            addToFront(newEntry);
+        }
+        else if(newPosition == itemCount)
+        {
+            addToBack(newEntry);
         }
         else
         {
+            auto newNodePtr = new Node<ItemType>(newEntry);
+
             Node<ItemType>* prevPtr = getNodeAt(newPosition - 1);
 
             newNodePtr -> setNext(prevPtr -> getNext());
             prevPtr -> setNext(newNodePtr);
+            itemCount++;
         }
-
-        itemCount++;
     }
 
     return ableToInsert;

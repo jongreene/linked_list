@@ -43,7 +43,7 @@ int main() {
 //    linkedList->removeFromBack();
 
 
-//    linkedList->insert(2,14);
+    linkedList->insert(5,14);
 
 //    linkedList->addToFront(12);
 
