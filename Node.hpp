@@ -19,6 +19,8 @@ private:
     // stores the location of the next node in the chain
     Node<ItemType>* next;
 
+    Node<ItemType>* last;
+
 public:
     // generic constructor which assigns next node to nullptr
     Node();
@@ -32,11 +34,16 @@ public:
     // sets the next node in the chain
     void setNext (Node<ItemType>* nextNodePtr);
 
+    // sets the last node in the chain
+    void setLast (Node<ItemType>* nextNodePtr);
+
     // returns the nodes item/value
     ItemType getItem() const;
 
     // gets the next node in the chain
     Node<ItemType>* getNext() const;
+
+    Node<ItemType>* getLast() const;
 };
 
 

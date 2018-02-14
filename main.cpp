@@ -9,7 +9,7 @@
 ostream& operator<<(ostream& os, LinkedList<int>* list)
 {
     LinkedIterator<int> currentIterator = list->begin();
-    string stringified = "";
+    string stringified;
 
     while(currentIterator != list->end())
     {
@@ -26,13 +26,18 @@ int main() {
     std::cout << "Hello, World!" << std::endl;
 
     LinkedList<int>* linkedList = new LinkedList<int>;
-    linkedList->addToBack(10);
-    linkedList->addToBack(20);
-    linkedList->addToBack(25);
-
-    linkedList->insert(2,14);
-
+//    linkedList->addToFront(12);
+//    linkedList->addToFront(15);
+    linkedList->addToBack(1);
+    linkedList->addToBack(2);
+    linkedList->addToBack(3);
     linkedList->addToFront(12);
+    linkedList->addToBack(4);
+
+
+//    linkedList->insert(2,14);
+
+//    linkedList->addToFront(12);
 
 //    linkedList->removeFromBack();
 //    linkedList->removeFromFront();

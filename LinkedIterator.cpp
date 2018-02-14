@@ -36,7 +36,7 @@ bool LinkedIterator<ItemType>::operator!=(const LinkedIterator<ItemType> &rightH
 }
 
 template<class ItemType>
-Node<ItemType>* LinkedIterator<ItemType>::getPtr()
+Node<ItemType>* LinkedIterator<ItemType>::getPointer()
 {
     return currentItemPtr;
 }

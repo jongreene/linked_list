@@ -30,7 +30,8 @@ public:
 
     bool operator!=(const LinkedIterator<ItemType>& rightHandSide) const;
 
-    Node<ItemType>* getPtr();
+    Node<ItemType>* getPointer();
+
 };
 
 

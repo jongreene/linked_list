@@ -30,6 +30,12 @@ void Node<ItemType>::setNext(Node<ItemType> *nextNodePtr)
 }
 
 template<class ItemType>
+void Node<ItemType>::setLast(Node<ItemType> *lastNodePtr)
+{
+    last = lastNodePtr;
+}
+
+template<class ItemType>
 ItemType Node<ItemType>::getItem() const
 {
     return item;
@@ -39,4 +45,10 @@ template<class ItemType>
 Node<ItemType>* Node<ItemType>::getNext() const
 {
     return next;
+}
+
+template<class ItemType>
+Node<ItemType>* Node<ItemType>::getLast() const
+{
+    return last;
 }

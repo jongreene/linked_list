@@ -17,6 +17,8 @@ void LinkedList<ItemType>::addToEmpty(const ItemType &newEntry)
     auto newNodePtr = new Node<ItemType>(newEntry);
     headPtr = newNodePtr;
     headPtr->setNext(nullptr);
+    headPtr->setLast(nullptr);
+
     itemCount++;
 }
 
@@ -131,31 +133,30 @@ void LinkedList<ItemType>::addToBack(const ItemType &newEntry)
 {
     if(itemCount == 0){
         addToEmpty(newEntry);
+
     }
     else
     {
         auto newNodePtr = new Node<ItemType>(newEntry);
         auto curPtr = headPtr;
+        auto lastPtr = headPtr;
 
         while(curPtr != nullptr && curPtr -> getNext() != nullptr)
         {
             curPtr = curPtr -> getNext();
+            lastPtr = lastPtr -> getNext();
         }
+
         curPtr -> setNext(newNodePtr);
+
+        curPtr = curPtr -> getNext();
+        curPtr -> setLast(lastPtr);
+
+//        std::cout << lastPtr -> getItem() << " " << curPtr->getLast() -> getItem() << " " << curPtr -> getItem() << "\n";
+
         itemCount++;
 
-//        auto newNodePtr = new Node<ItemType>(newEntry);
-//        LinkedIterator<ItemType> currentIterator = this->begin();
-//        while(currentIterator != this->end())
-//        {
-//            ++currentIterator;
-//            if(currentIterator == this->end())
-//            {
-//                (*currentIterator).getPtr()->setNext(newNodePtr);
-//                itemCount++;
-//            }
-//        }
-
+//
     }
 }
 
@@ -168,9 +169,10 @@ void LinkedList<ItemType>::addToFront(const ItemType &newEntry)
     else
     {
         auto newNodePtr = new Node<ItemType>(newEntry);
-        auto curPtr = headPtr;
 
-        newNodePtr -> setNext(curPtr);
+        newNodePtr -> setNext(headPtr);
+
+        headPtr -> setLast(newNodePtr);
 
         headPtr = newNodePtr;
 
