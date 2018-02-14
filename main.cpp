@@ -34,7 +34,7 @@ int main() {
 //    linkedList->addToFront(15);
     linkedList->addToBack(1);
     linkedList->addToBack(2);
-    linkedList->addToBack(3);
+    linkedList->addToBack(9);
 //    linkedList->addToFront(12);
     linkedList->addToBack(4);
     linkedList->addToBack(5);
@@ -53,8 +53,10 @@ int main() {
 //    pretty print linked list
     std::cout << linkedList;
 
-//    std::cout << "length: " << linkedList->getLength();
-//    << " item 1: " << linkedList->getEntry(1) << " item 2: " << linkedList->getEntry(2);
+    std::cout << "\nEntry at pos. 2: " << linkedList->getEntry(2);
+
+//    Test to throw error
+//    std::cout << "\nEntry at pos. 3: " << linkedList->getEntry(12);
 
     return 0;
 }

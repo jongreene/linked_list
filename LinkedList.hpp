@@ -24,7 +24,7 @@ private:
 
     int itemCount;
 
-    Node<ItemType> *getNodeAt(int position) const;
+    Node<ItemType> *getNodeAt(int position);
 
     void addToEmpty(const ItemType &newEntry);
 
@@ -56,7 +56,7 @@ public:
     void removeFromFront();
 
     // returns the item at the requested position (if possible)
-    ItemType getEntry(int position) const throw();
+    ItemType getEntry(int position) throw();
 
 //    ItemType replace(int position, const ItemType& newEntry) throw();
 

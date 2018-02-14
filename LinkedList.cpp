@@ -37,7 +37,7 @@ int LinkedList<ItemType>::getLength() const
 }
 
 template<class ItemType>
-ItemType LinkedList<ItemType>::getEntry(int position) const throw()
+ItemType LinkedList<ItemType>::getEntry(int position) throw()
 {
     bool ableToGet = (position >= 1) && (position <= itemCount);
     if (ableToGet)
@@ -47,6 +47,7 @@ ItemType LinkedList<ItemType>::getEntry(int position) const throw()
     }
     else
     {
+//        TODO: refactor this code
         std::string message = "getEntry() called with an empty list or ";
         message = message + "invalid position";
         throw(message);
@@ -54,17 +55,17 @@ ItemType LinkedList<ItemType>::getEntry(int position) const throw()
 }
 
 template<class ItemType>
-Node<ItemType>* LinkedList<ItemType>::getNodeAt(int position) const
+Node<ItemType>* LinkedList<ItemType>::getNodeAt(int position)
 {
     assert( (position >= 1) && (position <= itemCount) );
 
-    Node<ItemType>* curPtr = headPtr;
-    for (int skip = 1; skip < position; skip++)
-    {
-        curPtr = curPtr -> getNext();
-    }
+    LinkedIterator<int> currentIterator = this->begin();
 
-    return curPtr;
+    for (int i = 1; i < position; i++)
+    {
+        ++currentIterator;
+    }
+    return currentIterator.getPointer();
 }
 
 template<class ItemType>
