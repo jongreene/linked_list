@@ -45,6 +45,7 @@ int main() {
 
     linkedList->insert(5,14);
 
+    linkedList->removeAt(3);
 //    linkedList->addToFront(12);
 
 //    linkedList->removeFromBack();

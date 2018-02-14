@@ -97,34 +97,39 @@ bool LinkedList<ItemType>::insert(int newPosition, const ItemType& newEntry)
     return ableToInsert;
 }
 
-//template<class ItemType>
-//bool LinkedList<ItemType>::removeAt(int position)
-//{
-//    bool ableToRemove = (position >= 1) && (position <= itemCount);
-//    if (ableToRemove) {
-//        Node<ItemType> *curPtr = nullptr;
-//        if (position == 1)
-//        {
-//            curPtr = headPtr;
-//            headPtr = headPtr->getNext();
-//        }
-//        else
-//        {
-//            Node<ItemType>* prevPtr = getNodeAt(position - 1);
-//
-//            curPtr = prevPtr->getNext();
-//
-//            prevPtr ->setNext(curPtr -> getNext());
-//        }
-//
-//        curPtr -> setNext(nullptr);
-//        delete curPtr;
-//        curPtr = nullptr;
-//
-//        itemCount--;
-//    }
-//}
-//
+template<class ItemType>
+bool LinkedList<ItemType>::removeAt(int position)
+{
+    bool ableToRemove = (position >= 1) && (position <= itemCount);
+    if (ableToRemove) {
+        if (position == 1)
+        {
+            removeFromFront();
+        }
+        else if(position == itemCount)
+        {
+            removeFromBack();
+        }
+        else
+        {
+            auto toBeReplaced = getNodeAt(position);
+
+            auto prevPtr = toBeReplaced -> getPrevious();
+
+            auto nextPtr = toBeReplaced -> getNext();
+
+            prevPtr -> setNext(nextPtr);
+
+            nextPtr -> setPrevious(prevPtr);
+
+            delete toBeReplaced;
+        }
+
+
+        itemCount--;
+    }
+}
+
 //template<class ItemType>
 //void LinkedList<ItemType>::clear()
 //{
@@ -183,9 +188,13 @@ void LinkedList<ItemType>::removeFromBack()
     }
     else
     {
-        tailPtr = tailPtr -> getPrevious();
+        auto oldTail = tailPtr;
+
+        tailPtr = oldTail -> getPrevious();
 
         tailPtr -> setNext(nullptr);
+
+        delete oldTail;
 
         itemCount--;
     }
@@ -199,7 +208,11 @@ void LinkedList<ItemType>::removeFromFront()
     }
     else
     {
-        headPtr = headPtr->getNext();
+        auto oldHead = headPtr;
+
+        headPtr = oldHead->getNext();
+
+        delete oldHead;
 
         itemCount--;
     }

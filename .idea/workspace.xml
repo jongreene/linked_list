@@ -12,11 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="873ed8ca-265e-42d3-b8aa-385be95b5812" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/linked_list.dir/LinkedList.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/linked_list.dir/LinkedList.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/linked_list.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/linked_list.dir/main.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/linked_list" afterPath="$PROJECT_DIR$/cmake-build-debug/linked_list" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList.cpp" afterPath="$PROJECT_DIR$/LinkedList.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LinkedList.hpp" afterPath="$PROJECT_DIR$/LinkedList.hpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="1202">
+              <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
               <folding>
                 <element signature="e#49#68#0" expanded="true" />
               </folding>
@@ -44,8 +42,8 @@
       <file leaf-file-name="LinkedList.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LinkedList.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+            <state relative-caret-position="612">
+              <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
                 <element signature="e#120#138#0" expanded="true" />
                 <element signature="e#307#323#0" expanded="true" />
@@ -57,8 +55,8 @@
       <file leaf-file-name="LinkedList.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LinkedList.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="3038">
+              <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding>
                 <element signature="e#49#66#0" expanded="true" />
                 <element signature="e#102#118#0" expanded="true" />
@@ -68,13 +66,13 @@
                 <element signature="e#681#697#0" expanded="true" />
                 <element signature="e#1161#1177#0" expanded="true" />
                 <element signature="e#1489#1505#0" expanded="true" />
-                <element signature="e#2193#2219#0" expanded="false" />
-                <element signature="e#3014#3030#0" expanded="true" />
-                <element signature="e#3426#3442#0" expanded="true" />
-                <element signature="e#3796#3812#0" expanded="true" />
-                <element signature="e#4041#4057#0" expanded="true" />
-                <element signature="e#4245#4261#0" expanded="true" />
-                <element signature="e#4381#4397#0" expanded="true" />
+                <element signature="e#2201#2217#0" expanded="true" />
+                <element signature="e#3010#3026#0" expanded="true" />
+                <element signature="e#3422#3438#0" expanded="true" />
+                <element signature="e#3792#3808#0" expanded="true" />
+                <element signature="e#4095#4111#0" expanded="true" />
+                <element signature="e#4357#4373#0" expanded="true" />
+                <element signature="e#4493#4509#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -167,8 +165,8 @@
         <option value="$PROJECT_DIR$/Node.hpp" />
         <option value="$PROJECT_DIR$/Node.cpp" />
         <option value="$PROJECT_DIR$/LinkedList.hpp" />
-        <option value="$PROJECT_DIR$/LinkedList.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/LinkedList.cpp" />
       </list>
     </option>
   </component>
@@ -258,7 +256,7 @@
       <option name="presentableId" value="Default" />
       <updated>1518362350870</updated>
       <workItem from="1518362352108" duration="27986000" />
-      <workItem from="1518614823053" duration="5474000" />
+      <workItem from="1518614823053" duration="6429000" />
     </task>
     <task id="LOCAL-00001" summary="Updated creator name">
       <created>1518446677232</created>
@@ -323,11 +321,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518620659627</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Cleaned up insert function">
+      <created>1518620973321</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1518620973321</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33460000" />
+    <option name="totallyTimeSpent" value="34415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1088" y="48" width="3712" height="2148" extended-state="6" />
@@ -338,7 +343,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32976556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -368,7 +373,8 @@
     <MESSAGE value="overrode -- to give bidirectional traversal" />
     <MESSAGE value="Removed loops from addBack &amp; remove back. Code cleanup." />
     <MESSAGE value="Implemented iterative getNodeAt()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented iterative getNodeAt()" />
+    <MESSAGE value="Cleaned up insert function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up insert function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -415,13 +421,13 @@
             <element signature="e#681#697#0" expanded="true" />
             <element signature="e#1161#1177#0" expanded="true" />
             <element signature="e#1489#1505#0" expanded="true" />
-            <element signature="e#2193#2219#0" expanded="false" />
-            <element signature="e#3014#3030#0" expanded="true" />
-            <element signature="e#3426#3442#0" expanded="true" />
-            <element signature="e#3796#3812#0" expanded="true" />
-            <element signature="e#4041#4057#0" expanded="true" />
-            <element signature="e#4245#4261#0" expanded="true" />
-            <element signature="e#4381#4397#0" expanded="true" />
+            <element signature="e#2201#2217#0" expanded="true" />
+            <element signature="e#3010#3026#0" expanded="true" />
+            <element signature="e#3422#3438#0" expanded="true" />
+            <element signature="e#3792#3808#0" expanded="true" />
+            <element signature="e#4095#4111#0" expanded="true" />
+            <element signature="e#4357#4373#0" expanded="true" />
+            <element signature="e#4493#4509#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -560,8 +566,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LinkedList.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        <state relative-caret-position="612">
+          <caret line="45" column="32" lean-forward="false" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
           <folding>
             <element signature="e#120#138#0" expanded="true" />
             <element signature="e#307#323#0" expanded="true" />
@@ -571,8 +577,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="1202">
+          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
           <folding>
             <element signature="e#49#68#0" expanded="true" />
           </folding>
@@ -581,8 +587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LinkedList.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="3038">
+          <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding>
             <element signature="e#49#66#0" expanded="true" />
             <element signature="e#102#118#0" expanded="true" />
@@ -592,13 +598,13 @@
             <element signature="e#681#697#0" expanded="true" />
             <element signature="e#1161#1177#0" expanded="true" />
             <element signature="e#1489#1505#0" expanded="true" />
-            <element signature="e#2193#2219#0" expanded="false" />
-            <element signature="e#3014#3030#0" expanded="true" />
-            <element signature="e#3426#3442#0" expanded="true" />
-            <element signature="e#3796#3812#0" expanded="true" />
-            <element signature="e#4041#4057#0" expanded="true" />
-            <element signature="e#4245#4261#0" expanded="true" />
-            <element signature="e#4381#4397#0" expanded="true" />
+            <element signature="e#2201#2217#0" expanded="true" />
+            <element signature="e#3010#3026#0" expanded="true" />
+            <element signature="e#3422#3438#0" expanded="true" />
+            <element signature="e#3792#3808#0" expanded="true" />
+            <element signature="e#4095#4111#0" expanded="true" />
+            <element signature="e#4357#4373#0" expanded="true" />
+            <element signature="e#4493#4509#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -43,6 +43,8 @@ public:
     // creates a new node and inserts it at the specified place if possible
     bool insert(int newPosition, const ItemType& newEntry);
 
+    bool removeAt(int position);
+
     // adds an item to the back of the list
     void addToBack(const ItemType &newEntry);
 
