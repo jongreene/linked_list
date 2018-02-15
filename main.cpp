@@ -32,20 +32,21 @@ int main() {
     LinkedList<int>* linkedList = new LinkedList<int>;
 //    linkedList->addToFront(12);
 //    linkedList->addToFront(15);
-    linkedList->addToBack(1);
+    linkedList->addToBack(10);
     linkedList->addToBack(2);
     linkedList->addToBack(3);
 //    linkedList->addToFront(12);
     linkedList->addToBack(4);
-    linkedList->addToBack(5);
-    linkedList->addToBack(6);
+    linkedList->addToBack(2);
+    linkedList->addToBack(1);
     linkedList->addToBack(7);
 
 //    linkedList->removeFromFront();
 //    linkedList->removeFromBack();
 
-    linkedList->swapNodes(2,3);
+//    linkedList->swapNodes(1,7);
 
+    linkedList->bubbleSort("descending");
 //    linkedList->insert(5,14);
 //
 //    linkedList->removeAt(3);

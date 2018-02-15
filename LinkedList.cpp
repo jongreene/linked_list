@@ -69,7 +69,7 @@ Node<ItemType>* LinkedList<ItemType>::getNodeAt(int position)
 }
 
 template<class ItemType>
-bool LinkedList<ItemType>::insert(int newPosition, const ItemType& newEntry)
+bool LinkedList<ItemType>::insertAt(int newPosition, const ItemType& newEntry)
 {
     bool ableToInsert = (newPosition >= 1 && (newPosition <=  itemCount + 1));
     if (ableToInsert)
@@ -232,19 +232,50 @@ void LinkedList<ItemType>::swapNodes(int firstPosition, int secondPosition)
 
 }
 
+//TODO: fix edge case swaps. doesn't work at postion 1 or at itemCount
 template<class ItemType>
 void LinkedList<ItemType>::replaceNodeAt(int position, const ItemType &newEntry)
 {
-    auto oldNode = getNodeAt(position);
-    auto newNode = new Node<ItemType>(newEntry);
 
-    newNode -> setNext(oldNode->getNext());
-    newNode -> setPrevious(oldNode->getPrevious());
+    if(position==1)
+    {
+        auto oldNode = headPtr;
+        auto newNode = new Node<ItemType>(newEntry);
 
-    oldNode -> getPrevious() -> setNext(newNode);
-    oldNode -> getNext() -> setPrevious(newNode);
+        newNode->setNext(oldNode->getNext());
+        newNode->setPrevious(nullptr);
 
-    delete oldNode;
+        oldNode->getNext()->setPrevious(newNode);
+
+        headPtr = newNode;
+
+        delete oldNode;
+    }
+    else if(position==itemCount)
+    {
+        auto oldNode = tailPtr;
+        auto newNode = new Node<ItemType>(newEntry);
+
+        newNode->setNext(nullptr);
+        newNode->setPrevious(oldNode->getPrevious());
+
+        oldNode->getPrevious()->setNext(newNode);
+
+        tailPtr = newNode;
+        delete oldNode;
+    }
+    else {
+        auto oldNode = getNodeAt(position);
+        auto newNode = new Node<ItemType>(newEntry);
+
+        newNode->setNext(oldNode->getNext());
+        newNode->setPrevious(oldNode->getPrevious());
+
+        oldNode->getPrevious()->setNext(newNode);
+        oldNode->getNext()->setPrevious(newNode);
+
+        delete oldNode;
+    }
 }
 
 template<class ItemType>
@@ -257,6 +288,26 @@ template<class ItemType>
 void LinkedList<ItemType>::pop()
 {
     removeFromFront();
+}
+
+template<class ItemType>
+void LinkedList<ItemType>::bubbleSort(string direction)
+{
+    assert(direction == "ascending" || direction == "descending");
+
+    for(int i=1; i<=itemCount; i++)
+    {
+        for(int j=1; j<=itemCount; j++)
+        {
+            if(direction=="ascending" && getNodeAt(i)->getItem() < getNodeAt(j)->getItem())
+            {
+                swapNodes(i,j);
+            }
+            else if(direction=="descending" && getNodeAt(i)->getItem() > getNodeAt(j)->getItem()){
+                swapNodes(i,j);
+            }
+        }
+    }
 }
 
 template<class ItemType>

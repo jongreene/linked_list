@@ -43,7 +43,7 @@ public:
 
     // takes a position and a new entry
     // creates a new node and inserts it at the specified place if possible
-    bool insert(int newPosition, const ItemType& newEntry);
+    bool insertAt(int newPosition, const ItemType& newEntry);
 
     bool removeAt(int position);
 
@@ -66,13 +66,18 @@ public:
 
     void swapNodes(int firstPosition, int secondPosition);
 
-    void replaceNodeAt(int position, Node<ItemType>* newNode);
-
+    // replaces a node at the specified position with a new of the given value
     void replaceNodeAt(int position, const ItemType &newEntry);
 
+    // adds an element to the front of the list
     void push(const ItemType &newEntry);
 
+    // removes the first element from the list
     void pop();
+
+    // bubble sorts the list
+    // accepts string values: ascending or descending
+    void bubbleSort(string direction);
 
     // Used as a starting point for iterator functionality
     LinkedIterator<ItemType> begin();
