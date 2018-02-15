@@ -47,6 +47,8 @@ public:
 
     bool removeAt(int position);
 
+    void clear();
+
     // adds an item to the back of the list
     void addToBack(const ItemType &newEntry);
 

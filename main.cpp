@@ -10,6 +10,8 @@
 // pretty print of doubly linked list
 ostream& operator<<(ostream& os, LinkedList<int>* list)
 {
+    assert(!(list->isEmpty()));
+
     LinkedIterator<int> currentIterator = list->begin();
     string stringified;
 
@@ -78,9 +80,12 @@ int main() {
 
     LinkedList<int>* linkedList2 = new LinkedList<int>(linkedList);
 
-    delete linkedList;
+//    delete linkedList;
+    std::cout << "\nlinkedList2: " << linkedList2;
 
-    std::cout << "\n" << linkedList2;
+//    linkedList->clear();
+
+    std::cout << "\nEmpty list: " << linkedList;
 
     return 0;
 }

@@ -76,7 +76,7 @@ void LinkedList<ItemType>::addToEmpty(const ItemType &newEntry)
 template<class ItemType>
 bool LinkedList<ItemType>::isEmpty() const
 {
-    return getLength() > 0;
+    return getLength() == 0;
 }
 
 template<class ItemType>
@@ -96,9 +96,7 @@ ItemType LinkedList<ItemType>::getEntry(int position) throw()
     }
     else
     {
-//        TODO: refactor this code
-        std::string message = "getEntry() called with an empty list or ";
-        message = message + "invalid position";
+        std::string message = "getEntry() called with an empty list or invalid position";
         throw(message);
     }
 }
@@ -172,19 +170,21 @@ bool LinkedList<ItemType>::removeAt(int position)
             nextPtr -> setPrevious(prevPtr);
 
             delete toBeReplaced;
+
+            itemCount--;
         }
 
 
-        itemCount--;
+
     }
 }
 
-//template<class ItemType>
-//void LinkedList<ItemType>::clear()
-//{
-//    while (!isEmpty())
-//        remove(1);
-//}
+template<class ItemType>
+void LinkedList<ItemType>::clear()
+{
+    while (!isEmpty())
+        removeAt(1);
+}
 
 template<class ItemType>
 void LinkedList<ItemType>::addToBack(const ItemType &newEntry)
