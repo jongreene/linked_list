@@ -5,87 +5,14 @@
 #include <iostream>
 #include "LinkedList.hpp"
 #include "LinkedList.cpp"
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
 
-
-// pretty print of doubly linked list
-ostream& operator<<(ostream& os, LinkedList<int>* list)
-{
-    assert(!(list->isEmpty()));
-
-    LinkedIterator<int> currentIterator = list->begin();
-    string stringified;
-
-    while(currentIterator != list->end())
-    {
-        stringified += std::to_string(*currentIterator) + " ";
-        ++currentIterator;
-    }
-
-    stringified += std::to_string(*(list->end()));
-
-    os << stringified;
-
-    return os;
-}
-
-int main() {
+int main(int argc, char* argv[]) {
     std::cout << "Hello, World!" << std::endl;
 
-    LinkedList<int>* linkedList = new LinkedList<int>;
-//    linkedList->addToFront(12);
-//    linkedList->addToFront(15);
-    linkedList->addToBack(10);
-    linkedList->addToBack(2);
-    linkedList->addToBack(1);
-//    linkedList->addToFront(12);
-    linkedList->addToBack(4);
-    linkedList->addToBack(2);
-    linkedList->addToBack(1);
-    linkedList->addToBack(7);
-
-//    linkedList->removeFromFront();
-//    linkedList->removeFromBack();
-
-//    linkedList->swapNodes(1,7);
-
-//    linkedList->bubbleSort("descending");
-//    linkedList->insert(5,14);
-//
-//    linkedList->removeAt(3);
-
-//    linkedList->replaceNodeAt(3,10);
-
-//    auto tmpNode = new Node<int>(3);
-//    auto tmpNode2 = new Node<int>(6);
-//    auto tmpNode = linkedList->getNodeAt(3)->getItem();
-//    auto tmpNode2 = linkedList->getNodeAt(6)->getItem();
-
-//    linkedList->replaceNodeAt(6,tmpNode);
-//    linkedList->replaceNodeAt(3,tmpNode2);
-
-//    linkedList->addToFront(12);
-
-//    linkedList->removeFromBack();
-//    linkedList->removeFromFront();
-
-//    pretty print linked list
-    std::cout << linkedList;
-
-    std::cout << linkedList->search(1);
-
-//    std::cout << "\nEntry at pos. 2: " << linkedList->getEntry(2);
-
-//    Test to throw error
-//    std::cout << "\nEntry at pos. 3: " << linkedList->getEntry(12);
-
-    LinkedList<int>* linkedList2 = new LinkedList<int>(linkedList);
-
-//    delete linkedList;
-    std::cout << "\nlinkedList2: " << linkedList2;
-
-//    linkedList->clear();
-
-    std::cout << "\nEmpty list: " << linkedList;
+    testing::InitGoogleTest(&argc, argv);
+    RUN_ALL_TESTS();
 
     return 0;
 }
