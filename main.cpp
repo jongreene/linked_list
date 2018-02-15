@@ -34,7 +34,7 @@ int main() {
 //    linkedList->addToFront(15);
     linkedList->addToBack(10);
     linkedList->addToBack(2);
-    linkedList->addToBack(3);
+    linkedList->addToBack(1);
 //    linkedList->addToFront(12);
     linkedList->addToBack(4);
     linkedList->addToBack(2);
@@ -46,7 +46,7 @@ int main() {
 
 //    linkedList->swapNodes(1,7);
 
-    linkedList->bubbleSort("descending");
+//    linkedList->bubbleSort("descending");
 //    linkedList->insert(5,14);
 //
 //    linkedList->removeAt(3);
@@ -69,10 +69,18 @@ int main() {
 //    pretty print linked list
     std::cout << linkedList;
 
+    std::cout << linkedList->search(1);
+
 //    std::cout << "\nEntry at pos. 2: " << linkedList->getEntry(2);
 
 //    Test to throw error
 //    std::cout << "\nEntry at pos. 3: " << linkedList->getEntry(12);
+
+    LinkedList<int>* linkedList2 = new LinkedList<int>(linkedList);
+
+    delete linkedList;
+
+    std::cout << "\n" << linkedList2;
 
     return 0;
 }

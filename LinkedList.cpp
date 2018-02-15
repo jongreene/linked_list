@@ -12,6 +12,55 @@ LinkedList<ItemType>::LinkedList() : headPtr(nullptr), itemCount(0)
 }
 
 template<class ItemType>
+LinkedList<ItemType>::LinkedList(LinkedList<ItemType>* aList)
+{
+    itemCount = aList->itemCount;
+    Node<ItemType>* origListPtr = aList->headPtr;  // Points to nodes in original chain
+
+    if (origListPtr == nullptr)
+        headPtr = nullptr;  // Original list is empty
+    else
+    {
+        // Copy first node
+        headPtr = new Node<ItemType>(aList->headPtr->getItem());
+
+        // Copy remaining nodes
+        Node<ItemType>* newListPtr = headPtr;      // Points to last node in new chain
+
+        newListPtr -> setPrevious(nullptr);
+
+        origListPtr = origListPtr->getNext();     // Advance original-chain pointer
+
+        while (origListPtr != nullptr)
+        {
+            // Get next item from original chain
+            ItemType nextItem = origListPtr->getItem();
+
+            // Create a new node containing the next item
+            Node<ItemType>* newNodePtr = new Node<ItemType>(nextItem);
+
+            // Link new node to end of new chain
+            newListPtr->setNext(newNodePtr);
+
+            auto newListLastPtr = newListPtr;
+
+            // Advance pointer to new last node
+            newListPtr = newListPtr->getNext();
+
+            newListPtr -> setPrevious(newListLastPtr);
+
+            // Advance original-chain pointer
+            origListPtr = origListPtr->getNext();
+        }  // end while
+
+        newListPtr->setNext(nullptr);              // Flag end of new chain
+
+        tailPtr = newListPtr;
+    }  // end if
+}  // end copy constructor
+
+
+template<class ItemType>
 void LinkedList<ItemType>::addToEmpty(const ItemType &newEntry)
 {
     auto newNodePtr = new Node<ItemType>(newEntry);
@@ -308,6 +357,35 @@ void LinkedList<ItemType>::bubbleSort(string direction)
             }
         }
     }
+}
+
+template<class ItemType>
+string LinkedList<ItemType>::search(ItemType querie)
+{
+    int i=1;
+    bool hasValue = false;
+    string valueLocation;
+
+    LinkedIterator<int> currentIterator = this->begin();
+
+    while(currentIterator != this->end())
+    {
+        ++currentIterator;
+        i++;
+
+        if(*currentIterator == querie){
+            if(valueLocation.length()==0) {
+                valueLocation += "\nvalue(s) found at: ";
+                hasValue = true;
+            }
+            valueLocation+=std::to_string(i) + " ";
+        }
+    }
+
+    if(hasValue)
+        return valueLocation;
+    else
+        return "Value not found";
 }
 
 template<class ItemType>

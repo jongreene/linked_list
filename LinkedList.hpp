@@ -30,7 +30,7 @@ private:
 
 public:
     LinkedList();
-//    LinkedList(const LinkedList<ItemType>& aList);
+    LinkedList(LinkedList<ItemType>* aList);
 //    virtual ~LinkedList();
 
     Node<ItemType> *getNodeAt(int position);
@@ -78,6 +78,8 @@ public:
     // bubble sorts the list
     // accepts string values: ascending or descending
     void bubbleSort(string direction);
+
+    string search(ItemType querie);
 
     // Used as a starting point for iterator functionality
     LinkedIterator<ItemType> begin();
