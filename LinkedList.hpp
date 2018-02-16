@@ -30,8 +30,13 @@ private:
 
 public:
     LinkedList();
+
     LinkedList(LinkedList<ItemType>* aList);
 //    virtual ~LinkedList();
+
+    Node<ItemType>* getHeadPtr();
+
+    Node<ItemType>* getTailPtr();
 
     Node<ItemType> *getNodeAt(int position);
 

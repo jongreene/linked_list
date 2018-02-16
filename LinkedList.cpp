@@ -59,6 +59,17 @@ LinkedList<ItemType>::LinkedList(LinkedList<ItemType>* aList)
     }  // end if
 }  // end copy constructor
 
+template<class ItemType>
+Node<ItemType>* LinkedList<ItemType>::getHeadPtr()
+{
+    return headPtr;
+}
+
+template<class ItemType>
+Node<ItemType>* LinkedList<ItemType>::getTailPtr()
+{
+    return tailPtr;
+}
 
 template<class ItemType>
 void LinkedList<ItemType>::addToEmpty(const ItemType &newEntry)
