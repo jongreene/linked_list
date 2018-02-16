@@ -302,32 +302,32 @@ Node.cpp.s:
 	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Node.cpp.s
 .PHONY : Node.cpp.s
 
-Tests/test.o: Tests/test.cpp.o
+Tests/LinkedList_test.o: Tests/LinkedList_test.cpp.o
 
-.PHONY : Tests/test.o
+.PHONY : Tests/LinkedList_test.o
 
 # target to build an object file
-Tests/test.cpp.o:
-	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/test.cpp.o
-.PHONY : Tests/test.cpp.o
+Tests/LinkedList_test.cpp.o:
+	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o
+.PHONY : Tests/LinkedList_test.cpp.o
 
-Tests/test.i: Tests/test.cpp.i
+Tests/LinkedList_test.i: Tests/LinkedList_test.cpp.i
 
-.PHONY : Tests/test.i
+.PHONY : Tests/LinkedList_test.i
 
 # target to preprocess a source file
-Tests/test.cpp.i:
-	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/test.cpp.i
-.PHONY : Tests/test.cpp.i
+Tests/LinkedList_test.cpp.i:
+	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.i
+.PHONY : Tests/LinkedList_test.cpp.i
 
-Tests/test.s: Tests/test.cpp.s
+Tests/LinkedList_test.s: Tests/LinkedList_test.cpp.s
 
-.PHONY : Tests/test.s
+.PHONY : Tests/LinkedList_test.s
 
 # target to generate assembly for a file
-Tests/test.cpp.s:
-	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/test.cpp.s
-.PHONY : Tests/test.cpp.s
+Tests/LinkedList_test.cpp.s:
+	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.s
+.PHONY : Tests/LinkedList_test.cpp.s
 
 main.o: main.cpp.o
 
@@ -382,9 +382,9 @@ help:
 	@echo "... Node.o"
 	@echo "... Node.i"
 	@echo "... Node.s"
-	@echo "... Tests/test.o"
-	@echo "... Tests/test.i"
-	@echo "... Tests/test.s"
+	@echo "... Tests/LinkedList_test.o"
+	@echo "... Tests/LinkedList_test.i"
+	@echo "... Tests/LinkedList_test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

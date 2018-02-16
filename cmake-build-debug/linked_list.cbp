@@ -357,7 +357,7 @@
 		<Unit filename="/home/uberslam/CLionProjects/linked_list/Tests/ClassName.h">
 			<Option target="linked_list"/>
 		</Unit>
-		<Unit filename="/home/uberslam/CLionProjects/linked_list/Tests/test.cpp">
+		<Unit filename="/home/uberslam/CLionProjects/linked_list/Tests/LinkedList_test.cpp">
 			<Option target="linked_list"/>
 		</Unit>
 		<Unit filename="/home/uberslam/CLionProjects/linked_list/lib/googletest-master/googlemock/src/gmock-all.cc">

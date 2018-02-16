@@ -15,7 +15,7 @@ CMakeFiles/linked_list.dir/LinkedList.cpp.o
 CMakeFiles/linked_list.dir/Node.cpp.o
  /home/uberslam/CLionProjects/linked_list/Node.cpp
  /home/uberslam/CLionProjects/linked_list/Node.hpp
-CMakeFiles/linked_list.dir/Tests/test.cpp.o
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-generated-actions.h
@@ -55,8 +55,13 @@ CMakeFiles/linked_list.dir/Tests/test.cpp.o
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-string.h
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-tuple.h
  ../lib/googletest-master/googletest/include/gtest/internal/gtest-type-util.h
- /home/uberslam/CLionProjects/linked_list/Tests/ClassName.h
- /home/uberslam/CLionProjects/linked_list/Tests/test.cpp
+ /home/uberslam/CLionProjects/linked_list/LinkedIterator.cpp
+ /home/uberslam/CLionProjects/linked_list/LinkedIterator.hpp
+ /home/uberslam/CLionProjects/linked_list/LinkedList.cpp
+ /home/uberslam/CLionProjects/linked_list/LinkedList.hpp
+ /home/uberslam/CLionProjects/linked_list/Node.cpp
+ /home/uberslam/CLionProjects/linked_list/Node.hpp
+ /home/uberslam/CLionProjects/linked_list/Tests/LinkedList_test.cpp
 CMakeFiles/linked_list.dir/main.cpp.o
  ../lib/googletest-master/googlemock/include/gmock/gmock-actions.h
  ../lib/googletest-master/googlemock/include/gmock/gmock-cardinalities.h

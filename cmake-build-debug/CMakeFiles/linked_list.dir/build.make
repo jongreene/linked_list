@@ -153,28 +153,28 @@ CMakeFiles/linked_list.dir/LinkedIterator.cpp.o.provides: CMakeFiles/linked_list
 CMakeFiles/linked_list.dir/LinkedIterator.cpp.o.provides.build: CMakeFiles/linked_list.dir/LinkedIterator.cpp.o
 
 
-CMakeFiles/linked_list.dir/Tests/test.cpp.o: CMakeFiles/linked_list.dir/flags.make
-CMakeFiles/linked_list.dir/Tests/test.cpp.o: ../Tests/test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uberslam/CLionProjects/linked_list/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/linked_list.dir/Tests/test.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/linked_list.dir/Tests/test.cpp.o -c /home/uberslam/CLionProjects/linked_list/Tests/test.cpp
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o: CMakeFiles/linked_list.dir/flags.make
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o: ../Tests/LinkedList_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uberslam/CLionProjects/linked_list/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o -c /home/uberslam/CLionProjects/linked_list/Tests/LinkedList_test.cpp
 
-CMakeFiles/linked_list.dir/Tests/test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/linked_list.dir/Tests/test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uberslam/CLionProjects/linked_list/Tests/test.cpp > CMakeFiles/linked_list.dir/Tests/test.cpp.i
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uberslam/CLionProjects/linked_list/Tests/LinkedList_test.cpp > CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.i
 
-CMakeFiles/linked_list.dir/Tests/test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/linked_list.dir/Tests/test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uberslam/CLionProjects/linked_list/Tests/test.cpp -o CMakeFiles/linked_list.dir/Tests/test.cpp.s
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uberslam/CLionProjects/linked_list/Tests/LinkedList_test.cpp -o CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.s
 
-CMakeFiles/linked_list.dir/Tests/test.cpp.o.requires:
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.requires:
 
-.PHONY : CMakeFiles/linked_list.dir/Tests/test.cpp.o.requires
+.PHONY : CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.requires
 
-CMakeFiles/linked_list.dir/Tests/test.cpp.o.provides: CMakeFiles/linked_list.dir/Tests/test.cpp.o.requires
-	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/test.cpp.o.provides.build
-.PHONY : CMakeFiles/linked_list.dir/Tests/test.cpp.o.provides
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.provides: CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.requires
+	$(MAKE) -f CMakeFiles/linked_list.dir/build.make CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.provides.build
+.PHONY : CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.provides
 
-CMakeFiles/linked_list.dir/Tests/test.cpp.o.provides.build: CMakeFiles/linked_list.dir/Tests/test.cpp.o
+CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.provides.build: CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o
 
 
 # Object files for target linked_list
@@ -183,7 +183,7 @@ linked_list_OBJECTS = \
 "CMakeFiles/linked_list.dir/Node.cpp.o" \
 "CMakeFiles/linked_list.dir/LinkedList.cpp.o" \
 "CMakeFiles/linked_list.dir/LinkedIterator.cpp.o" \
-"CMakeFiles/linked_list.dir/Tests/test.cpp.o"
+"CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o"
 
 # External object files for target linked_list
 linked_list_EXTERNAL_OBJECTS =
@@ -192,7 +192,7 @@ linked_list: CMakeFiles/linked_list.dir/main.cpp.o
 linked_list: CMakeFiles/linked_list.dir/Node.cpp.o
 linked_list: CMakeFiles/linked_list.dir/LinkedList.cpp.o
 linked_list: CMakeFiles/linked_list.dir/LinkedIterator.cpp.o
-linked_list: CMakeFiles/linked_list.dir/Tests/test.cpp.o
+linked_list: CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o
 linked_list: CMakeFiles/linked_list.dir/build.make
 linked_list: lib/googletest-master/googlemock/gtest/libgtestd.a
 linked_list: lib/googletest-master/googlemock/gtest/libgtest_maind.a
@@ -210,7 +210,7 @@ CMakeFiles/linked_list.dir/requires: CMakeFiles/linked_list.dir/main.cpp.o.requi
 CMakeFiles/linked_list.dir/requires: CMakeFiles/linked_list.dir/Node.cpp.o.requires
 CMakeFiles/linked_list.dir/requires: CMakeFiles/linked_list.dir/LinkedList.cpp.o.requires
 CMakeFiles/linked_list.dir/requires: CMakeFiles/linked_list.dir/LinkedIterator.cpp.o.requires
-CMakeFiles/linked_list.dir/requires: CMakeFiles/linked_list.dir/Tests/test.cpp.o.requires
+CMakeFiles/linked_list.dir/requires: CMakeFiles/linked_list.dir/Tests/LinkedList_test.cpp.o.requires
 
 .PHONY : CMakeFiles/linked_list.dir/requires
 
