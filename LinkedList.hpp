@@ -24,14 +24,16 @@ private:
 
     int itemCount;
 
-
-
     void addToEmpty(const ItemType &newEntry);
+
+    void clear();
 
 public:
     LinkedList();
+
     LinkedList(LinkedList<ItemType>* aList);
-//    virtual ~LinkedList();
+
+    ~LinkedList();
 
     Node<ItemType> *getNodeAt(int position);
 
@@ -46,8 +48,6 @@ public:
     bool insertAt(int newPosition, const ItemType& newEntry);
 
     bool removeAt(int position);
-
-    void clear();
 
     // adds an item to the back of the list
     void addToBack(const ItemType &newEntry);

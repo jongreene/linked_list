@@ -43,30 +43,31 @@ int main() {
     linkedList->addToBack(1);
     linkedList->addToBack(7);
 
-//    linkedList->removeFromFront();
-//    linkedList->removeFromBack();
+    linkedList->removeFromFront();
+    linkedList->removeFromBack();
 
-//    linkedList->swapNodes(1,7);
+    linkedList->swapNodes(1,3);
 
-//    linkedList->bubbleSort("descending");
-//    linkedList->insert(5,14);
+    linkedList->bubbleSort("descending");
+    linkedList->insertAt(5,14);
 //
-//    linkedList->removeAt(3);
+    linkedList->removeAt(3);
 
-//    linkedList->replaceNodeAt(3,10);
+    linkedList->replaceNodeAt(3,10);
 
-//    auto tmpNode = new Node<int>(3);
-//    auto tmpNode2 = new Node<int>(6);
-//    auto tmpNode = linkedList->getNodeAt(3)->getItem();
-//    auto tmpNode2 = linkedList->getNodeAt(6)->getItem();
 
-//    linkedList->replaceNodeAt(6,tmpNode);
-//    linkedList->replaceNodeAt(3,tmpNode2);
+    linkedList->addToFront(12);
 
-//    linkedList->addToFront(12);
+    linkedList->removeFromBack();
+    linkedList->removeFromFront();
 
-//    linkedList->removeFromBack();
-//    linkedList->removeFromFront();
+    linkedList->getEntry(2);
+
+    linkedList->insertAt(2, 4);
+
+    linkedList->push(2);
+
+    linkedList->pop();
 
 //    pretty print linked list
     std::cout << linkedList;
@@ -80,12 +81,18 @@ int main() {
 
     LinkedList<int>* linkedList2 = new LinkedList<int>(linkedList);
 
+
+
 //    delete linkedList;
     std::cout << "\nlinkedList2: " << linkedList2;
 
 //    linkedList->clear();
 
     std::cout << "\nEmpty list: " << linkedList;
+
+    delete linkedList;
+
+    delete linkedList2;
 
     return 0;
 }

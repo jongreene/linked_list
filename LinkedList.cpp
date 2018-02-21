@@ -6,11 +6,15 @@
 #include "LinkedList.hpp"
 
 template<class ItemType>
-LinkedList<ItemType>::LinkedList() : headPtr(nullptr), itemCount(0)
+LinkedList<ItemType>::LinkedList() : headPtr(nullptr), itemCount(0) {}
+
+template<class ItemType>
+LinkedList<ItemType>::~LinkedList()
 {
+    clear();
+}  // end destructor
 
-}
-
+// copy constructor
 template<class ItemType>
 LinkedList<ItemType>::LinkedList(LinkedList<ItemType>* aList)
 {
@@ -281,7 +285,6 @@ void LinkedList<ItemType>::swapNodes(int firstPosition, int secondPosition)
 
 }
 
-//TODO: fix edge case swaps. doesn't work at postion 1 or at itemCount
 template<class ItemType>
 void LinkedList<ItemType>::replaceNodeAt(int position, const ItemType &newEntry)
 {
